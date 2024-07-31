@@ -5,13 +5,23 @@ VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineVotingSystem", "OnlineVotingSystem\OnlineVotingSystem.csproj", "{99E199F5-4A4E-4068-92EF-1FF89FABD795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineVotingSystem.Infrastructure", "OnlineVotingSystem.Infrastructure\OnlineVotingSystem.Infrastructure.csproj", "{AE61EF96-8316-4095-9012-B89EACE5A388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineVotingSystem.Infrastructure", "OnlineVotingSystem.Infrastructure\OnlineVotingSystem.Infrastructure.csproj", "{AE61EF96-8316-4095-9012-B89EACE5A388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineVotingSystem.Domain", "OnlineVotingSystem.Domain\OnlineVotingSystem.Domain.csproj", "{B1BDC200-37E6-44B1-B732-44C5613557F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineVotingSystem.Domain", "OnlineVotingSystem.Domain\OnlineVotingSystem.Domain.csproj", "{B1BDC200-37E6-44B1-B732-44C5613557F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineVotingSystem.Application", "OnlineVotingSystem.Application\OnlineVotingSystem.Application.csproj", "{EBA1306A-5BA5-49AB-8334-84046E4829EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineVotingSystem.Application", "OnlineVotingSystem.Application\OnlineVotingSystem.Application.csproj", "{EBA1306A-5BA5-49AB-8334-84046E4829EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineVotingSystem.Tests", "OnlineVotingSystem.Tests\OnlineVotingSystem.Tests.csproj", "{513A5641-9A37-457A-B046-B247F7FF2909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineVotingSystem.Tests", "OnlineVotingSystem.Tests\OnlineVotingSystem.Tests.csproj", "{513A5641-9A37-457A-B046-B247F7FF2909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{305235B3-127B-44C5-BFBF-1D53C71A30BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D66936EC-FCD1-4E1F-8184-35565ED77F92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{137D830E-CEB8-4F50-BC76-91C52D952C03}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +52,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{99E199F5-4A4E-4068-92EF-1FF89FABD795} = {305235B3-127B-44C5-BFBF-1D53C71A30BA}
+		{AE61EF96-8316-4095-9012-B89EACE5A388} = {305235B3-127B-44C5-BFBF-1D53C71A30BA}
+		{B1BDC200-37E6-44B1-B732-44C5613557F7} = {305235B3-127B-44C5-BFBF-1D53C71A30BA}
+		{EBA1306A-5BA5-49AB-8334-84046E4829EA} = {305235B3-127B-44C5-BFBF-1D53C71A30BA}
+		{513A5641-9A37-457A-B046-B247F7FF2909} = {D66936EC-FCD1-4E1F-8184-35565ED77F92}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2C90575-614F-489C-BE8A-38DC34C66883}
