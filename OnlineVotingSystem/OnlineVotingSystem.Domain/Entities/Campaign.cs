@@ -1,10 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using static System.Collections.Specialized.BitVector32;
 
-namespace OnlineVotingSystem.Models
+namespace OnlineVotingSystem.Domain.Entities
 {
-
     public class Campaign
     {
         /// <summary>
@@ -15,18 +15,18 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Unique identifier for the election associated with the campaign.
         /// </summary>
-        [ForeignKey("Election")]
+        [ForeignKey("Elections")]
         public int ElectionID { get; set; }
         /// <summary>
         /// Unique identifier for the candidate associated with the campaign.
         /// </summary>
-        [ForeignKey("Candidate")]
+        [ForeignKey("Candidates")]
         public int CandidateID { get; set; }
         /// <summary>
         /// Description of the campaign.
         /// </summary>
-        [MaxLength(500)]
-        public string Description { get; set; }
+        [MaxLength(100)]
+        public string? Description { get; set; }
         /// <summary>
         /// Gets or sets the start date of the campaign.
         /// </summary>
@@ -46,10 +46,10 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Navigation property to the associated Election entity.
         /// </summary>
-        public Elections Elections { get; set; }
+        public Elections Elections { get; set; } = null!;
         /// <summary>
         /// Navigation property to the associated Candidate entity.
         /// </summary>
-        public Candidates Candidates { get; set; }
+        public Candidates Candidates { get; set; } = null!;
     }
 }

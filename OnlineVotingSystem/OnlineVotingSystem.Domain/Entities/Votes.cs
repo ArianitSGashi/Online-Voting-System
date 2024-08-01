@@ -1,10 +1,6 @@
-﻿using OnlineVotingSystem.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineVotingSystem.Domain.Entities
 {
@@ -22,10 +18,12 @@ namespace OnlineVotingSystem.Domain.Entities
         /// <summary>
         /// Unique identifier for the election in which the vote was cast.
         /// </summary>
+        [ForeignKey("Elections")]
         public int ElectionID { get; set; }
         /// <summary>
         /// Unique identifier for the candidate who received the vote.
         /// </summary>
+        [ForeignKey("Candidates")]
         public int CandidateID { get; set; }
         /// <summary>
         /// Date and time when the vote was cast.
@@ -35,10 +33,10 @@ namespace OnlineVotingSystem.Domain.Entities
         /// <summary>
         /// Candidate object associated with the vote, representing the candidate details.
         /// </summary>
-        public Candidates Candidates { get; set; }
+        public Candidates Candidates { get; set; } = null!;
         /// <summary>
         /// Election object associated with the vote, representing the election details.
         /// </summary>
-        public Elections Elections { get; set; }
+        public Elections Elections { get; set; } = null!;
     }
 }

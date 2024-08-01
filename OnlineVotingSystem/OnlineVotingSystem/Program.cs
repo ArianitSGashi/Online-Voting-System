@@ -1,7 +1,11 @@
+using OnlineVotingSystem.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Call the ConfigureService method from the Infrastructure layer to register DbContext and other services
+builder.Services.ConfigureService(builder.Configuration);
 
 var app = builder.Build();
 

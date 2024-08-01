@@ -1,7 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OnlineVotingSystem.Models
+namespace OnlineVotingSystem.Domain.Entities
 {
     public class Complaints
     {
@@ -17,11 +18,14 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Gets or sets the unique identifier of the election related to the complaint.
         /// </summary>
+        [ForeignKey("Elections")]
         public int ElectionID { get; set; }
         /// <summary>
         /// Gets or sets the text of the complaint.
         /// </summary>
-        public string ComplaintText { get; set; }
+        [Required]
+        [MaxLength(200)]
+        public string ComplaintText { get; set; } = null!;
         /// <summary>
         /// Gets or sets the date the complaint was filed.
         /// </summary>
@@ -29,6 +33,6 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Navigation property to the associated Election entity.
         /// </summary>
-        public Elections Elections { get; set; }
+        public Elections Elections { get; set; } = null!;
     }
 }
