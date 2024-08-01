@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
     public interface IFeedbackRepository : IGenericRepository<Feedback>
     {
-        Task<IEnumerable<Feedback>> GetByUserIdAsync(int userId);
+        Task<IEnumerable<Feedback>> GetByUserIdAsync(string userId);
 
         Task<IEnumerable<Feedback>> GetByElectionIdAsync(int electionId);
 
