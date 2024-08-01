@@ -1,6 +1,5 @@
-﻿using OnlineVotingSystem.Domain.Entities.OnlineVotingSystem.Models;
-using OnlineVotingSystem.Models;
-using System;
+﻿using System;
+using OnlineVotingSystem.Domain.Entities;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +8,12 @@ using System.Threading.Tasks;
     namespace OnlineVotingSystem.Domain.Interfaces
     {
 
-    public interface IFeedbackRepository : IGenericRepository<FeedBack>
+    public interface IFeedbackRepository : IGenericRepository<Feedback>
     {
-        Task<IEnumerable<FeedBack>> GetByUserIdAsync(int userId);
+        Task<IEnumerable<Feedback>> GetByUserIdAsync(int userId);
 
-        Task<IEnumerable<FeedBack>> GetByElectionIdAsync(int electionId);
+        Task<IEnumerable<Feedback>> GetByElectionIdAsync(int electionId);
 
-        Task<IEnumerable<FeedBack>> GetByFeedbackDateAsync(DateTime date);
+        Task<IEnumerable<Feedback>> GetByFeedbackDateAsync(DateTime date);
     }
 }
