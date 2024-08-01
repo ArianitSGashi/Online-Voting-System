@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace OnlineVotingSystem.Models
+namespace OnlineVotingSystem.Domain.Entities
 {
     public class Candidates
     {
@@ -13,24 +14,24 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Gets or sets the unique identifier for the election the candidate is participating in.
         /// </summary>
-        [ForeignKey("Election")]
+        [ForeignKey("Elections")]
         public int ElectionID { get; set; }
         /// <summary>
         /// Gets or sets the full name of the candidate.
         /// </summary>
         [Required]
-        [MaxLength(100)]
-        public string FullName { get; set; }
+        [MaxLength(50)]
+        public string FullName { get; set; } = null!;
         /// <summary>
         /// Gets or sets the political party of the candidate.
         /// </summary>
         [MaxLength(50)]
-        public string Party { get; set; }
+        public string? Party { get; set; }
         /// <summary>
         /// Gets or sets a description of the candidate.
         /// </summary>
-        [MaxLength(500)]
-        public string Description { get; set; }
+        [MaxLength(100)]
+        public string? Description { get; set; }
         /// <summary>
         /// Gets or sets the declared income of the candidate.
         /// </summary>
@@ -39,11 +40,15 @@ namespace OnlineVotingSystem.Models
         /// <summary>
         /// Gets or sets the works and achievements of the candidate.
         /// </summary>
-        [MaxLength(500)]
-        public string Works { get; set; }
+        [MaxLength(100)]
+        public string? Works { get; set; }
         /// <summary>
         /// Navigation property to the associated Election entity.
         /// </summary>
-        public Elections Elections { get; set; }
+        public Elections Elections { get; set; } = null!;
+
+        public ICollection<Votes> Votes { get; set; } = new List<Votes>();
+        public ICollection<Result> Results { get; set; } = new List<Result>();
+        public ICollection<Campaign> Campaigns { get; set; } = new List<Campaign>();
     }
 }
