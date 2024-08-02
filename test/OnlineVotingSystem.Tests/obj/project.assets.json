@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nitig\\source\\repos\\ArianitSGashi\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\OnlineVotingSystem.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\nitig\\source\\repos\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\OnlineVotingSystem.Tests.csproj",
       "projectName": "OnlineVotingSystem.Tests",
-      "projectPath": "C:\\Users\\nitig\\source\\repos\\ArianitSGashi\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\OnlineVotingSystem.Tests.csproj",
+      "projectPath": "C:\\Users\\nitig\\source\\repos\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\OnlineVotingSystem.Tests.csproj",
       "packagesPath": "C:\\Users\\nitig\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nitig\\source\\repos\\ArianitSGashi\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\obj\\",
+      "outputPath": "C:\\Users\\nitig\\source\\repos\\Online-Voting-System\\test\\OnlineVotingSystem.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
